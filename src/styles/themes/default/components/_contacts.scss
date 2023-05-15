@@ -1,0 +1,476 @@
+.contact {
+  @include myFlex();
+  background-color: $c-negroni;
+  height: 80vh;
+  background-image: url(../../../../assets/circle_03.png);
+  background-repeat: no-repeat;
+  background-position: 700px -200px;
+  background-size: 450px;
+}
+
+.formPart {
+  flex-basis: 190vw;
+  margin-right: $space-x-small;
+  margin-left: $space-x-large;
+
+  h2 {
+    font-size: pxToRem(40);
+    margin-left: 1vw;
+  }
+
+  p {
+    font-size: pxToRem(25);
+    margin-left: 1vw;
+  }
+}
+
+.form {
+  &__input {
+    input {
+      margin: $space-x-small;
+      width: 80%;
+      padding: $space-small $space-small;
+      @include boxShadow(3px 3px 3px 3px $c-gray);
+      border-radius: 4px;
+      border-style: none;
+    }
+  }
+
+  &__textArea {
+    textarea {
+      margin: $space-x-small;
+      width: 80%;
+      padding: $space-y-large $space-small $space-y-large;
+      @include boxShadow(3px 3px 3px 3px $c-gray);
+      border-radius: 4px;
+      border-style: none;
+    }
+  }
+
+  &__textArea {
+    textarea:active {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+  &__submit {
+    button {
+      cursor: pointer;
+      margin: 10px;
+      width: 84%;
+      padding: $space-small;
+      border-radius: 4px;
+      @include boxShadow(3px 3px 3px 3px $c-gray);
+      background-color: #7371ec;
+      color: $c-white;
+      font-size: pxToRem(20);
+      border-style: none;
+      transition: 0.5s background-color ease-in-out;
+    }
+
+    button:active {
+      color: $c-black;
+      transform: scale(1.1, 1.1);
+      border-style: none;
+      outline: none;
+    }
+    button:hover {
+      background-color: rgb(34, 61, 171);
+    }
+  }
+}
+.contactDetails {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 5rem;
+  .phoneAndEmail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 300px;
+    max-height: 100px;
+    padding: 3% 6% 3% 3%;
+    background-color: hsla(0, 0%, 100%, 0.7);
+    @include boxShadow(5px 5px 5px 5px $c-gray);
+    border-radius: 10px;
+    figure {
+      margin: 0;
+    }
+    &__text {
+      div {
+        display: grid;
+        grid-template-columns: auto auto;
+        p {
+          border-bottom: 4px solid transparent;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            border-bottom: 4px solid rgb(34, 61, 171);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    img {
+      max-width: 100px;
+      max-height: 100px;
+      transition: 1s ease;
+      &:hover {
+        transform: rotateZ(-10deg);
+        transition: 1s ease;
+      }
+    }
+  }
+  .descr {
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 2%;
+    font-size: pxToRem(22);
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    a {
+      border-bottom: 4px solid transparent;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        border-bottom: 4px solid rgb(34, 61, 171);
+      }
+    }
+    p {
+      margin: $space-xxx-small;
+    }
+    &__photo {
+      img {
+        height: 20vh;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-high) {
+  .contact {
+    height: 620px;
+  }
+  .form {
+    &__submit {
+      button {
+        cursor: pointer;
+        margin: 10px;
+        width: 82%;
+        padding: $space-small;
+        border-radius: 4px;
+        @include boxShadow(3px 3px 3px 3px $c-gray);
+        background-color: #7371ec;
+        color: $c-white;
+        font-size: pxToRem(20);
+        border-style: none;
+        transition: 0.5s background-color ease-in-out;
+      }
+      button:active {
+        color: $c-black;
+        transform: scale(1.05, 1.05);
+        border-style: none;
+        outline: none;
+      }
+    }
+  }
+  .contact {
+    @include myFlex();
+    background-color: $c-negroni;
+    max-height: 600px;
+    background-image: url(../../../../assets/circle_03.png);
+    background-repeat: no-repeat;
+    background-position: 700px -200px;
+    background-size: 450px;
+  }
+  .contactDetails {
+    .descr {
+      width: 40vw;
+    }
+    .phoneAndEmail {
+      max-width: 600px;
+      max-height: 100px;
+    }
+  }
+}
+@media only screen and (max-width: $break-laptopBigger) {
+  .form {
+    &__submit {
+      button {
+        width: 83.5%;
+      }
+    }
+  }
+  .contactDetails {
+    .descr {
+      width: 40vw;
+    }
+  }
+}
+@media only screen and (max-width: $break-laptop) {
+  .contact {
+    @include myFlex();
+    background-color: $c-negroni;
+    height: 560px;
+    background-image: url(../../../../assets/circle_03.png);
+    background-repeat: no-repeat;
+    background-position: 700px -200px;
+    background-size: 450px;
+  }
+  .formPart {
+    margin-right: $space-x-small;
+    margin-left: $space-xx-large;
+
+    h2 {
+      margin-left: 1vw;
+    }
+
+    p {
+      margin-left: 1vw;
+    }
+  }
+  .form {
+    &__submit {
+      button {
+        width: 84%;
+      }
+    }
+  }
+  .contactDetails {
+    .descr {
+      width: 40vw;
+    }
+  }
+}
+@media only screen and (max-width: $break-mid) {
+  .contact {
+    @include myFlex();
+    background-color: $c-negroni;
+    height: 490px;
+    background-image: url(../../../../assets/circle_03.png);
+    background-repeat: no-repeat;
+    background-position: 700px -200px;
+    background-size: 450px;
+  }
+  .form {
+    &__submit {
+      margin-bottom: $space-large;
+      display: block;
+      button {
+        margin: 10px;
+        width: 96%;
+      }
+    }
+    &__input,
+    &__textArea {
+      width: 100%;
+      input {
+        width: 90%;
+      }
+      textarea {
+        width: 90%;
+      }
+    }
+  }
+  .formPart {
+    margin-right: $space-x-small;
+    margin-left: $space-xx-large;
+
+    h2 {
+      font-size: pxToRem(30);
+      margin-left: 1vw;
+    }
+
+    p {
+      font-size: pxToRem(15);
+      margin-left: 1vw;
+    }
+  }
+  .contactDetails {
+    .descr {
+      width: 35vw;
+      p {
+        font-size: pxToRem(15);
+      }
+    }
+  }
+  .phoneAndEmail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 300px;
+    max-height: 100px;
+    padding: 3% 6% 3% 3%;
+    @include boxShadow(5px 5px 5px 5px $c-gray);
+    border-radius: 10px;
+    &__text {
+      p {
+        font-size: pxToRem(15);
+      }
+    }
+    img {
+      max-width: 70px;
+      max-height: 70px;
+    }
+  }
+}
+@media only screen and (max-width: $break-mobile) {
+  .contact {
+    @include myFlex();
+    flex-direction: column;
+    background-color: $c-negroni;
+    max-height: 490px;
+    background-image: url(../../../../assets/circle_03.png);
+    background-repeat: no-repeat;
+    background-position: 700px -200px;
+    background-size: 450px;
+  }
+  .formPart {
+    margin-right: $space-xx-large;
+    margin-left: $space-xx-large;
+
+    h2 {
+      font-size: pxToRem(25);
+      margin-left: 1vw;
+    }
+
+    p {
+      font-size: pxToRem(15);
+      margin-left: 1vw;
+    }
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__submit {
+      width: 100%;
+      margin: 0;
+      margin-bottom: $space-large;
+      display: block;
+      button {
+        margin: 10px;
+        width: 95%;
+      }
+    }
+    &__input,
+    &__textArea {
+      width: 100%;
+      input {
+        width: 90%;
+      }
+      textarea {
+        width: 90%;
+      }
+    }
+  }
+  .contactDetails {
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    .descr {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      p {
+        font-size: pxToRem(15);
+      }
+    }
+    .phoneAndEmail {
+      margin: auto;
+      img {
+        width: 70px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xs) {
+  .contact {
+    @include myFlex();
+    flex-direction: column;
+    background-color: $c-negroni;
+    height: 420px;
+    background-image: url(../../../../assets/circle_03.png);
+    background-repeat: no-repeat;
+    background-position: 700px -200px;
+    background-size: 450px;
+  }
+  .formPart {
+    margin-right: $space-x-small;
+    margin-left: $space-standard;
+
+    h2 {
+      font-size: pxToRem(15);
+      margin-left: 1vw;
+    }
+
+    p {
+      font-size: pxToRem(12);
+      margin-left: 1vw;
+    }
+  }
+  .form {
+    &__submit {
+      width: 100%;
+      margin: 0;
+      margin-bottom: $space-large;
+      display: block;
+      button {
+        margin: 10px;
+        width: 88%;
+        font-size: pxToRem(12);
+      }
+    }
+    &__input,
+    &__textArea {
+      width: 100%;
+      input {
+        width: 80%;
+        font-size: pxToRem(12);
+      }
+      textarea {
+        width: 80%;
+        font-size: pxToRem(12);
+      }
+    }
+  }
+  .contactDetails {
+    .descr {
+      p {
+        font-size: pxToRem(15);
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xss) {
+  .contact {
+    max-height: 450px;
+    min-width: 320px;
+  }
+  .contactDetails {
+    .phoneAndEmail {
+      margin: auto;
+      p {
+        font-size: pxToRem(12);
+      }
+    }
+  }
+  .form__submit {
+    button {
+      margin: 10px;
+      width: 90%;
+    }
+  }
+}

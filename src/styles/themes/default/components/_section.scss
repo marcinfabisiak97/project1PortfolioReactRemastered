@@ -1,0 +1,129 @@
+.wrapper-bar {
+  @include myFlex();
+  width: 100%;
+  background-color: $c-twilight-blue;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 37px;
+  margin-bottom: $space-x-small;
+  font-size: pxToRem(15);
+}
+
+.bar {
+  color: $c-nightRider;
+  &__displayBlock {
+    display: block;
+  }
+  &__displayNone {
+    display: none;
+  }
+  &__javascript {
+    height: 37px;
+    @include bar;
+    p {
+      animation: 2s animateDisplay;
+    }
+    &--width {
+      width: 60%;
+    }
+  }
+
+  &__css {
+    height: 37px;
+    @include bar;
+    p {
+      animation: 2s animateDisplay;
+    }
+    &--width {
+      width: 80%;
+    }
+  }
+
+  &__html {
+    height: 37px;
+    @include bar;
+    p {
+      animation: 2s animateDisplay;
+    }
+    &--width {
+      width: 100%;
+    }
+  }
+
+  &__node {
+    height: 37px;
+    @include bar;
+    p {
+      animation: 2s animateDisplay;
+    }
+    &--width {
+      width: 20%;
+    }
+  }
+
+  &__react {
+    height: 37px;
+    @include bar;
+    p {
+      animation: 2s animateDisplay;
+    }
+    &--width {
+      width: 60%;
+    }
+  }
+  &__typescript {
+    height: 37px;
+    @include bar;
+    p {
+      animation: 2s animateDisplay;
+    }
+    &--width {
+      width: 40%;
+    }
+  }
+}
+
+.main-toolsworkscontact {
+  background-image: url(../../../../assets/circle_01.png),
+    url(../../../../assets/circle_01.png), url(../../../../assets/circle_01.png);
+  background-repeat: no-repeat;
+  background-position: 950px 50px, 750px 450px, -100px 1100px;
+  background-size: 300px, 450px;
+}
+.sticky {
+  position: sticky;
+}
+
+@media only screen and (max-width: $break-mid) {
+  .wrapper-bar {
+    height: 25px;
+    font-size: pxToRem(15);
+    article {
+      height: 25px;
+      p {
+        font-size: pxToRem(12);
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xs) {
+  .wrapper-bar {
+    height: 15px;
+    font-size: pxToRem(10);
+    article {
+      height: 15px;
+      p {
+        font-size: pxToRem(10);
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xxs) {
+  .wrapper-bar {
+    article {
+      p {
+        font-size: pxToRem(7);
+      }
+    }
+  }
+}

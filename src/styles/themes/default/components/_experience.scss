@@ -1,0 +1,418 @@
+.upperPart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: nth($sizes, 12);
+  padding-right: 0;
+  margin: $space-x-large 0px $space-medium;
+  background-image: url(../../../../assets/circle_02.png),
+    url(../../../../assets/devPhoto.png);
+  background-repeat: no-repeat;
+  background-position: -100px 0px, 100px 35px;
+  background-size: 200px;
+  box-sizing: border-box;
+}
+
+.experience {
+  margin-right: $space-large;
+  margin-top: $space-standard;
+  width: 50vw;
+  @include boxShadow(5px 5px 5px 5px $c-gray);
+  margin-bottom: $space-null;
+  padding: $space-medium $space-medium $space-x-small;
+  border-radius: 5px;
+  background-color: $c-white-opacity;
+  color: $c-black;
+  h2 {
+    margin-top: $space-null;
+    margin-bottom: $space-null;
+    padding-bottom: $space-null;
+  }
+
+  h3 {
+    margin-top: $space-null;
+    margin-bottom: $space-null;
+    padding-bottom: $space-null;
+  }
+  div {
+    margin-top: $space-null;
+    margin-bottom: $space-null;
+    padding-bottom: $space-null;
+    font-weight: bold;
+    color: #7371ec;
+  }
+  &__seework {
+    @include myFlex();
+    justify-content: flex-end;
+    margin-top: $space-null;
+
+    a:first-child {
+      p {
+        transition: all 0.5s ease-in-out;
+        border-bottom: 4px solid white;
+        &:hover {
+          border-bottom: 4px solid rgb(34, 61, 171);
+          cursor: pointer;
+        }
+      }
+    }
+    img {
+      transition: 0.3s transform ease-in-out;
+      width: 55px;
+      height: 55px;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.freelanceDescr {
+  margin-top: $space-small;
+  text-align: right;
+  height: 20vh;
+  max-width: 35vw;
+  div {
+    display: grid;
+    animation-name: hop;
+    animation-duration: 1s;
+    position: relative;
+    animation-iteration-count: 2;
+  }
+
+  button {
+    cursor: pointer;
+    // width: 90%;
+    padding: $space-x-small;
+    margin: $space-small;
+    background-color: $c-negroni;
+    border-radius: 4px;
+    border-style: none;
+    color: $c-black;
+    transition: all 0.2s ease-in-out;
+  }
+  button:focus {
+    outline: none;
+  }
+  button:active {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  button:hover {
+    background-color: #7371ec;
+  }
+  .copyAndDownloadButton {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    button:first-child {
+      display: grid;
+      grid-template-columns: auto auto;
+      place-items: center;
+      gap: 10px;
+    }
+  }
+}
+@media only screen and (max-width: $break-high) {
+  .upperPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: nth($sizes, 12);
+    padding-right: 0;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: -100px 0px, 200px 35px;
+    background-size: 300px;
+    box-sizing: border-box;
+
+    .freelanceDescr {
+      margin-top: $space-small;
+      margin-right: $space-large;
+      text-align: right;
+      height: 20vh;
+      max-width: 40vw;
+
+      h1 {
+        font-size: pxToRem(40);
+      }
+
+      p {
+        font-size: pxToRem(30);
+      }
+
+      button {
+        font-size: pxToRem(30);
+      }
+    }
+  }
+
+  .experience {
+    div {
+      font-size: pxToRem(30);
+    }
+    h2 {
+      font-size: pxToRem(35);
+    }
+
+    h3 {
+      font-size: pxToRem(30);
+    }
+
+    p {
+      font-size: pxToRem(25);
+    }
+  }
+}
+@media only screen and (max-width: $break-laptop) {
+  .upperPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: $space-xxx-large 0px $space-medium;
+    width: nth($sizes, 12);
+    padding-right: 0;
+    max-height: 800px;
+    background-repeat: no-repeat;
+    background-position: -100px 0px, 100px 35px;
+    background-size: 200px;
+    box-sizing: border-box;
+    .freelanceDescr {
+      margin-top: $space-small;
+      margin-right: $space-large;
+      text-align: right;
+      height: 20vh;
+      max-width: 39vw;
+      div {
+        button {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-mid) {
+  .upperPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: nth($sizes, 12);
+    margin: $space-x-large 0px $space-standard;
+    padding-right: 0;
+    max-height: 450px;
+    background-repeat: no-repeat;
+    background-position: -100px 0px, 100px 35px;
+    background-size: 200px;
+    box-sizing: border-box;
+
+    .freelanceDescr {
+      margin-top: $space-small;
+      margin-right: $space-large;
+      text-align: right;
+      height: 20vh;
+      max-width: 39vw;
+      h1 {
+        font-size: pxToRem(30);
+      }
+
+      p {
+        font-size: pxToRem(20);
+      }
+      div {
+        button {
+          font-size: pxToRem(18);
+        }
+      }
+    }
+    .copyAndDownloadButton {
+      button {
+        min-height: 40px;
+      }
+    }
+  }
+
+  .experience {
+    div {
+      font-size: pxToRem(20);
+    }
+    h2 {
+      font-size: pxToRem(30);
+    }
+
+    h3 {
+      font-size: pxToRem(20);
+    }
+
+    p {
+      font-size: pxToRem(15);
+    }
+  }
+}
+@media only screen and (max-width: $break-mobile) {
+  .upperPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: nth($sizes, 12);
+    padding-right: 0;
+    max-height: 420px;
+    background-repeat: no-repeat;
+    background-position: -100px 0px, 50px 35px;
+    background-size: 150px;
+    box-sizing: border-box;
+    .experience {
+      div {
+        font-size: pxToRem(15);
+      }
+      h2 {
+        font-size: pxToRem(25);
+      }
+
+      h3 {
+        font-size: pxToRem(15);
+      }
+
+      p {
+        font-size: pxToRem(15);
+      }
+    }
+    .freelanceDescr {
+      margin-top: $space-small;
+      margin-right: $space-large;
+      text-align: right;
+      height: 20vh;
+      max-width: 40vw;
+
+      h1 {
+        font-size: pxToRem(25);
+      }
+
+      p {
+        font-size: pxToRem(15);
+      }
+      div {
+        button {
+          padding: 10px 5px;
+          font-size: pxToRem(14);
+        }
+      }
+    }
+    .copyAndDownloadButton {
+      button {
+        max-height: 25px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xs) {
+  .upperPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: nth($sizes, 12);
+    padding-right: 0;
+    margin: 10px 0;
+    max-height: 300px;
+    background-image: url(../../../../assets/circle_02.png);
+    background-repeat: no-repeat;
+    background-position: -100px 0px, 50px 35px;
+    background-size: 170px;
+    box-sizing: border-box;
+    .experience {
+      margin: 20px auto;
+      margin-top: 20px;
+      width: 50vw;
+      div {
+        font-size: pxToRem(10);
+      }
+      h2 {
+        font-size: pxToRem(15);
+      }
+
+      h3 {
+        font-size: pxToRem(10);
+      }
+
+      p {
+        font-size: pxToRem(10);
+      }
+
+      .experience__seework {
+        @include myFlex();
+        justify-content: flex-end;
+        margin-top: $space-null;
+        a {
+          p {
+            width: 70px;
+          }
+        }
+        img:first-of-type {
+          width: 35px;
+          height: 35px;
+          margin-top: $space-xxx-small;
+        }
+
+        img {
+          width: 43px;
+          height: 43px;
+        }
+      }
+    }
+    .freelanceDescr {
+      margin: auto;
+      text-align: center;
+      max-width: 60vw;
+      min-width: 50vw;
+      height: 20vh;
+      div {
+        display: grid;
+        justify-content: center;
+        button {
+          font-size: pxToRem(12);
+          padding: 5px 5px;
+          margin: 7px;
+        }
+      }
+
+      h1 {
+        font-size: pxToRem(15);
+      }
+
+      p {
+        font-size: pxToRem(10);
+      }
+
+      button {
+        font-size: pxToRem(10);
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .copyAndDownloadButton {
+      button {
+        max-height: 20px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xxs) {
+  .upperPart {
+    .experience {
+      width: 60vw;
+    }
+
+    .freelanceDescr {
+      max-width: 70vw;
+      div {
+        button {
+          font-size: pxToRem(10);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xss) {
+  .upperPart {
+    max-height: 290px;
+  }
+}

@@ -1,0 +1,91 @@
+@import "./variables";
+@import "./normalize";
+@import "./fonts.scss";
+
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: $c-white;
+  color: $c-black;
+  box-sizing: border-box;
+}
+h3 {
+  color: #7371ec;
+}
+
+img,
+input[type="image"],
+table {
+  aspect-ratio: attr(width) / attr(height);
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  color: $c-black;
+  text-decoration: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+@keyframes hop {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    left: 0px;
+    top: -10px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes hopButton {
+  0% {
+    left: 95%;
+    top: 50px;
+  }
+  50% {
+    left: 95%;
+    top: 40px;
+  }
+  100% {
+    left: 95%;
+    top: 50px;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animateDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

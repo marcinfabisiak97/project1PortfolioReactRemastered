@@ -1,0 +1,8 @@
+.upperpartAndDownpart {
+    background-image: url(../../../../assets/circle_01.png),
+      url(../../../../assets/circle_02.png), url(../../../../assets/circle_01.png),
+      url(../../../../assets/circle_01.png);
+    background-repeat: no-repeat;
+    background-position: 250px 350px, 730px 150px, 830px 650px, -250px 800px;
+    background-size: 300px, 400px;
+  }

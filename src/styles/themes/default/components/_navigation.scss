@@ -1,0 +1,234 @@
+.header {
+  @include myFlex();
+  justify-content: flex-end;
+  background-color: $c-gray-opacity;
+  background-image: linear-gradient($c-gray-opacity, $c-white);
+  max-height: 10vh;
+  width: 100%;
+}
+
+.header > h3 {
+  @include myFlex();
+  font-size: pxToRem(120);
+  align-items: center;
+  justify-content: center;
+  color: $c-gray-opacity;
+  width: 50vw;
+  margin-top: $space-null;
+  margin-bottom: $space-null;
+  padding-top: $space-null;
+  padding-bottom: $space-null;
+}
+
+.header {
+  &__menu {
+    position: relative;
+  }
+  &__burger {
+    cursor: pointer;
+    font-size: pxToRem(50);
+    border-radius: 4px;
+    border-style: none;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      box-shadow: 4px 4px 4px 4px #888888;
+    }
+    &--invisible {
+      transform: translateX(-100vw);
+    }
+  }
+  &__nav {
+    font-size: pxToRem(23);
+    font-weight: 700;
+    margin: $space-small;
+    width: 100%;
+    min-height: 30px;
+    align-items: center;
+    background-color: $c-negroni;
+    @include myFlex();
+    @include createFlex(row, normal, horizontal);
+    justify-content: space-around;
+    border-radius: 3px;
+    margin-right: $space-large;
+    position: sticky;
+    transition: transform 0.5s ease-in-out;
+    &--invisible {
+      transform: translateX(-100vw);
+    }
+  }
+  &__navLi {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 15px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    div::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #7371ec;
+      transform: scaleY(0);
+      transition: transform 0.5s ease-in-out;
+      z-index: -1;
+    }
+    div:hover::after {
+      transform: scaleY(1.4);
+    }
+  }
+}
+
+@media only screen and (max-width: $break-high) {
+  .header > h3 {
+    @include myFlex();
+    font-size: pxToRem(140);
+    margin-top: $space-medium;
+    padding-top: $space-medium;
+  }
+
+  .header {
+    &__nav {
+      font-size: pxToRem(30);
+      padding: $space-medium;
+      margin: $space-small;
+    }
+  }
+}
+@media only screen and (max-width: $break-laptop) {
+  .header > h3 {
+    @include myFlex();
+    font-size: pxToRem(100);
+    align-items: center;
+    justify-content: center;
+    color: $c-gray-opacity;
+    width: 40vw;
+    margin-top: $space-null;
+    margin-bottom: $space-null;
+    padding-top: $space-standard;
+    padding-bottom: $space-null;
+  }
+
+  .header {
+    padding-top: 0;
+    &__nav {
+      font-size: pxToRem(30);
+      padding: $space-medium;
+    }
+  }
+}
+@media only screen and (max-width: $break-mid) {
+  .header {
+    margin-right: 100px;
+    &__burger {
+      cursor: pointer;
+      font-size: pxToRem(40);
+    }
+    &__nav {
+      width: 70vw;
+      font-size: pxToRem(18);
+      padding: $space-small;
+      margin-top: $space-small;
+      div {
+        min-width: 100px;
+      }
+    }
+  }
+  .header > h3 {
+    display: none;
+    font-size: pxToRem(80);
+    width: 20vw;
+    margin-top: $space-xx-small;
+    margin-bottom: $space-xx-small;
+    padding-top: $space-small;
+    padding-bottom: $space-xx-small;
+  }
+}
+@media only screen and (max-width: $break-mobile) {
+  .header {
+    @include myFlex();
+    justify-content: space-around;
+    padding-left: 0px;
+    margin-right: 0px;
+    box-sizing: border-box;
+
+    &__nav {
+      padding: $space-x-small;
+    }
+  }
+
+  .header > h3 {
+    font-size: pxToRem(80);
+    width: 10vw;
+    margin-top: $space-xx-small;
+    margin-bottom: $space-xx-small;
+    padding-top: $space-xx-small;
+    padding-bottom: $space-xx-small;
+  }
+}
+@media only screen and (max-width: $break-xs) {
+  .header > h3 {
+    justify-content: center;
+    font-size: pxToRem(45);
+    width: 10vw;
+    margin-top: $space-xx-small;
+    margin-bottom: $space-xx-small;
+    padding-top: $space-xx-small;
+    padding-bottom: $space-xx-small;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 70vh;
+    justify-content: space-around;
+    &__burger {
+      display: none;
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: pxToRem(14);
+      justify-content: space-between;
+      width: 100vw;
+      padding: 0;
+      margin: auto;
+      border-radius: 0;
+      &--invisible {
+        transform: translateX(0vw);
+      }
+      &Li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0;
+        border-bottom: 4px double #888888;
+        div {
+          margin: 0;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xss) {
+  .header {
+    padding-left: 0;
+    &__navLi {
+      font-size: pxToRem(10);
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.myWorks {
+  margin-left: $space-standard;
+  margin-top: $space-medium;
+  width: 90%;
+}
+.portfolios {
+  @include myFlex();
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: $space-large;
+  margin-right: $space-large;
+  &__projLinks {
+    img {
+      min-width: 30vw;
+    }
+  }
+  &__view {
+    border-radius: 4px;
+    @include boxShadow(4px 4px 4px 4px $c-gray);
+    margin-top: $space-standard;
+    figure {
+      margin: 0;
+    }
+    img {
+      border-radius: 4px 4px 0px 0px;
+    }
+  }
+  &__links {
+    @include myFlex();
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+    figcaption {
+      text-align: center;
+      font-size: pxToRem(25);
+    }
+    a {
+      img {
+        transition: 0.5s transform ease-in-out;
+        max-width: 40px;
+        margin: 5px;
+      }
+    }
+  }
+  &__links {
+    img:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+@media only screen and (max-width: $break-high) {
+  .myWorks {
+    margin-left: $space-xxx-large;
+    margin-top: $space-medium;
+    width: 90%;
+
+    h2 {
+      font-size: pxToRem(40);
+    }
+
+    h3 {
+      font-size: pxToRem(30);
+    }
+
+    p {
+      font-size: pxToRem(25);
+    }
+  }
+  .portfolios {
+    &__links {
+      figcaption {
+        font-size: pxToRem(25);
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-laptop) {
+  .portfolios {
+    &__projLinks {
+      img {
+        min-width: 30vw;
+      }
+    }
+    &__links {
+      figcaption {
+        font-size: pxToRem(20);
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-mid) {
+  .myWorks {
+    margin-left: $space-xxx-large;
+    margin-top: $space-medium;
+    width: 90%;
+    h2 {
+      font-size: pxToRem(30);
+    }
+    h3 {
+      font-size: pxToRem(20);
+    }
+    p {
+      font-size: pxToRem(15);
+    }
+  }
+  .portfolios {
+    &__projLinks {
+      img {
+        min-width: 20vw;
+      }
+    }
+    &__links {
+      figcaption {
+        font-size: pxToRem(20);
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-mobile) {
+  .myWorks {
+    margin-left: $space-xxx-large;
+    margin-top: $space-medium;
+    width: 90%;
+
+    h2 {
+      font-size: pxToRem(25);
+    }
+
+    h3 {
+      font-size: pxToRem(20);
+    }
+
+    p {
+      font-size: pxToRem(15);
+    }
+  }
+  .portfolios {
+    &__projLinks {
+      img {
+        max-width: 50vw;
+      }
+    }
+    &__links {
+      figcaption {
+        font-size: pxToRem(20);
+      }
+      a {
+        img {
+          max-width: 30px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xs) {
+  .myWorks {
+    margin-left: $space-standard;
+    margin-top: $space-medium;
+    width: 80%;
+
+    h2 {
+      font-size: pxToRem(15);
+    }
+
+    h3 {
+      font-size: pxToRem(12);
+    }
+
+    p {
+      font-size: pxToRem(10);
+    }
+  }
+  .portfolios {
+    &__links {
+      figcaption {
+        font-size: pxToRem(12);
+      }
+    }
+  }
+  .portfolios_view {
+    max-width: 270px;
+    img {
+      max-width: 270px;
+    }
+  }
+}
+@media only screen and (max-width: $break-xss) {
+  .portfolios__view {
+    max-width: 250px;
+    img {
+      max-width: 250px;
+    }
+  }
+}
