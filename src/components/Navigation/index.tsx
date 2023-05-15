@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { scrollToRef } from "../Utils/Utils";
+import { scrollToRef } from "../Utils";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { TiDelete } from "react-icons/ti";
 import { RefProps } from "../Types";

@@ -1,9 +1,9 @@
 import React from "react";
 import Clipboard from "react-clipboard-animation";
-import { copyEmail } from "../../Utils/Utils";
+import { copyEmail } from "../../Utils";
 import { useAppSelector, useAppDispatch } from "../../../state/store";
 import { open } from "../../../state/slices/modalSlice/modalSlice";
-import { useChangeCopiedStateToDefaultAfter } from "../../Hooks/hooks";
+import { useChangeCopiedStateToDefaultAfter } from "../../Hooks";
 const ButtonsCopyAndDownload = () => {
   const state = useAppSelector((state) => state.data);
   const dispatch = useAppDispatch();
