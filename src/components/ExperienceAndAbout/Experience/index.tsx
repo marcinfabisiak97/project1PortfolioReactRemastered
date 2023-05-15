@@ -2,7 +2,9 @@ import React from "react";
 import Images from "../../../assets/exportFiles";
 import ButtonsCopyAndDownload from "../ButtonsCopyAndDownload";
 import Typewriter from "typewriter-effect";
+import { useAppSelector } from "../../../state/store";
 const Experience = () => {
+  const stateData = useAppSelector((state) => state.data);
   return (
     <React.Fragment>
       <section className="upperPart">
@@ -29,16 +31,10 @@ const Experience = () => {
             of experience within creating my own projects.
           </p>
           <figure className="experience__seework">
-            <a
-              target="blank"
-              href="https://github.com/marcinfabisiak97/one-page-portfolio-react/tree/dev"
-            >
+            <a target="blank" href={stateData.gitHub}>
               <p>See my work in github</p>
             </a>
-            <a
-              target="blank"
-              href="https://github.com/marcinfabisiak97/one-page-portfolio-react/tree/dev"
-            >
+            <a target="blank" href={stateData.gitHub}>
               <img src={Images.gitHub} alt="github" />
             </a>
           </figure>
