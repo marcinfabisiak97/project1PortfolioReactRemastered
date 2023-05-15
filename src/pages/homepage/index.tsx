@@ -19,22 +19,24 @@ const Homepage = () => {
   const [scrolled] = useScroll(skillref);
   const isKeyboardOpen = useDetectKeyboardOpen();
   return (
-    <main role="main" className="page">
+    <>
       <Navigation {...{ aboutref, skillref, myworkref, blogref, contactref }} />
-      {scrolled && !isKeyboardOpen && (
-        <div className="page__upper" onClick={() => scrollToRef(aboutref)}>
-          <BsFillCaretUpFill className="icons" />
-        </div>
-      )}
-      <section>
-        <ExperienceAndAbout skillref={skillref} />
-        <Tools />
-        <Myworks myworkref={myworkref} />
-        <Workstyle blogref={blogref} />
-        <JokePart />
-      </section>
-      <Contact contactref={contactref} />
-    </main>
+      <main className="page">
+        {scrolled && !isKeyboardOpen && (
+          <div className="page__upper" onClick={() => scrollToRef(aboutref)}>
+            <BsFillCaretUpFill className="icons" />
+          </div>
+        )}
+        <section>
+          <ExperienceAndAbout skillref={skillref} />
+          <Tools />
+          <Myworks myworkref={myworkref} />
+          <Workstyle blogref={blogref} />
+          <JokePart />
+        </section>
+        <Contact contactref={contactref} />
+      </main>
+    </>
   );
 };
 export default Homepage;
