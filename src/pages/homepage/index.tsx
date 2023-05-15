@@ -20,7 +20,11 @@ const Homepage = () => {
   const isKeyboardOpen = useDetectKeyboardOpen();
   return (
     <>
-      <Navigation {...{ aboutref, skillref, myworkref, blogref, contactref }} />
+      <header>
+        <Navigation
+          {...{ aboutref, skillref, myworkref, blogref, contactref }}
+        />
+      </header>
       <main className="page">
         {scrolled && !isKeyboardOpen && (
           <div className="page__upper" onClick={() => scrollToRef(aboutref)}>
@@ -34,8 +38,8 @@ const Homepage = () => {
           <Workstyle blogref={blogref} />
           <JokePart />
         </section>
-        <Contact contactref={contactref} />
       </main>
+      <Contact contactref={contactref} />
     </>
   );
 };
