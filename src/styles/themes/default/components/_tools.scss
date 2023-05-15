@@ -1,0 +1,173 @@
+.wrapperTools {
+  background-color: $c-negroni;
+  box-sizing: border-box;
+  background-image: url(../../../../assets/circle_01.png);
+  background-repeat: no-repeat;
+  background-position: 950px 50px;
+  background-size: 300px;
+  width: 100%;
+  padding-left: $space-xxx-large;
+  padding-right: $space-xxx-large;
+  padding-top: $space-small;
+  min-height: 300px;
+  h3 {
+    color: #7371ec;
+  }
+  .tollsIcon {
+    @include myFlex();
+    @include createFlex(row, normal, horizontal);
+    position: relative;
+    &__img {
+      @include boxShadow(3px 3px 3px 3px $c-gray);
+      background-color: $c-white;
+      padding: 1% 1%;
+      transition: 0.5s transform;
+      img {
+        margin: 10px;
+      }
+      p {
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 10px;
+        font-size: pxToRem(25);
+      }
+      &--translate {
+        transform: translateX(-100vw);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $break-high) {
+  .wrapperTools {
+    min-height: 500px;
+    h2 {
+      font-size: pxToRem(40);
+    }
+
+    h3 {
+      color: #7371ec;
+      font-size: pxToRem(30);
+    }
+    .tollsIcon {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      &__img {
+        img {
+          width: 100px;
+          height: 100px;
+        }
+
+        p {
+          font-size: pxToRem(25);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-laptop) {
+  .wrapperTools {
+    min-height: 400px;
+    h2 {
+      font-size: pxToRem(40);
+    }
+    .tollsIcon {
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      &__img {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+
+        p {
+          font-size: pxToRem(15);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-mid) {
+  .wrapperTools {
+    min-height: 300px;
+    h2 {
+      font-size: pxToRem(30);
+    }
+    h3 {
+      color: #7371ec;
+      font-size: pxToRem(20);
+    }
+    .tollsIcon {
+      display: flex;
+      justify-content: space-around;
+      &__img {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        p {
+          font-size: pxToRem(10);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-mobile) {
+  .wrapperTools {
+    min-height: 280px;
+    padding-left: 60px;
+    h2 {
+      padding-left: $space-standard;
+      font-size: pxToRem(25);
+    }
+
+    h3 {
+      padding-left: $space-standard;
+      font-size: pxToRem(15);
+      color: #7371ec;
+    }
+
+    .tollsIcon {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &__img {
+        margin-top: 1rem;
+        p {
+          font-size: pxToRem(10);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xs) {
+  .wrapperTools {
+    min-height: 350px;
+    padding-left: 0px;
+    padding-right: 10px;
+    h2 {
+      font-size: pxToRem(15);
+    }
+    h3 {
+      font-size: pxToRem(10);
+    }
+    .tollsIcon {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      &__img {
+        margin: 10px;
+        p {
+          font-size: pxToRem(12);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $break-xss) {
+  .wrapperTools {
+    min-height: 450px;
+  }
+}

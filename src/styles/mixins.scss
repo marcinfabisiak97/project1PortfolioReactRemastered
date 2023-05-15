@@ -1,0 +1,49 @@
+@function pxToRem($pxsize, $rembase: 16) {
+  @return ($pxsize / $rembase) + rem;
+}
+@mixin boxShadow($arg) {
+  -webkit-box-shadow: $arg;
+  box-shadow: $arg;
+}
+@mixin myFlex() {
+  $prefixes: (-webkit-box, -ms-flexbox, -webkit-flex, flex);
+  @each $prefix in $prefixes {
+    display: $prefix;
+  }
+}
+@mixin bar {
+  @include myFlex();
+  transition: width 1s;
+  padding-left: $space-xx-small;
+  align-items: center;
+  background-color: $c-negroni;
+  border: 1px solid $c-black;
+  border-radius: 6px;
+  width: 20%;
+}
+@mixin myFlex() {
+  $prefixes: (-webkit-box, -ms-flexbox, -webkit-flex, flex);
+
+  @each $prefix in $prefixes {
+    display: $prefix;
+  }
+}
+
+@mixin createFlex($flexDirection: false, $boxD: false, $boxO: false) {
+  @if $flexDirection {
+    -webkit-box-orient: $boxO;
+    -webkit-box-direction: $boxD;
+    -ms-flex-direction: $flexDirection;
+    flex-direction: $flexDirection;
+  }
+}
+
+@mixin createCol() {
+  @each $size in $sizes {
+    $index: index($sizes, $size);
+
+    .col-#{$index} {
+      width: $size;
+    }
+  }
+}

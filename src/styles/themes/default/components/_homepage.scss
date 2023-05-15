@@ -1,0 +1,66 @@
+.page {
+  &__upper {
+    width: 100vw;
+    position: fixed;
+    left: 95%;
+    top: 50px;
+    animation: 1s 3 hopButton;
+    cursor: pointer;
+    z-index: 1;
+    .icons {
+      font-size: 50px;
+      color: #7371ec;
+    }
+  }
+}
+@media only screen and (max-width: $break-mobile) {
+  .page {
+    &__upper {
+      width: 100vw;
+      position: fixed;
+      left: 90%;
+      top: 50px;
+    }
+  }
+  @keyframes hopButton {
+    0% {
+      left: 90%;
+      top: 50px;
+    }
+    50% {
+      left: 90%;
+      top: 40px;
+    }
+    100% {
+      left: 90%;
+      top: 50px;
+    }
+  }
+}
+@media only screen and (max-width: $break-xs) {
+  .page {
+    &__upper {
+      width: 100vw;
+      position: fixed;
+      left: 87%;
+      top: 50px;
+      .icons {
+        font-size: 30px;
+      }
+    }
+  }
+  @keyframes hopButton {
+    0% {
+      left: 87%;
+      top: 50px;
+    }
+    50% {
+      left: 87%;
+      top: 40px;
+    }
+    100% {
+      left: 87%;
+      top: 50px;
+    }
+  }
+}

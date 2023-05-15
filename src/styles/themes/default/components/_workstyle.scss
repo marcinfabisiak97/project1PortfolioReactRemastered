@@ -1,0 +1,117 @@
+.workStyle {
+  margin-left: $space-xx-large;
+  margin-right: $space-large;
+  h2 {
+    font-size: pxToRem(40);
+  }
+  h3,
+  h4 {
+    font-size: pxToRem(30);
+  }
+  p {
+    font-size: pxToRem(25);
+  }
+  &__mainTitle {
+    margin-left: 1vw;
+  }
+  &__paragraphs {
+    width: 100%;
+  }
+  .paragraph {
+    @include myFlex();
+    &__photo {
+      width: 20vw;
+      margin-right: 5vw;
+      margin-left: 1vw;
+    }
+    &__photo {
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+    &__descr {
+      padding: $space-null;
+      width: 65%;
+      h2 {
+        margin: $space-null;
+      }
+      h3 {
+        margin: $space-null;
+      }
+      h4 {
+        text-align: right;
+        margin: $space-null;
+      }
+      p {
+        a {
+          @include myFlex();
+          justify-content: center;
+          color: $c-negroni;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $break-mid) {
+  .workStyle {
+    margin-top: $space-large;
+    margin-left: $space-xx-large;
+    margin-right: $space-large;
+    margin-bottom: $space-standard;
+    h2 {
+      font-size: pxToRem(30);
+    }
+
+    h3,
+    h4 {
+      font-size: pxToRem(20);
+    }
+
+    p {
+      font-size: pxToRem(15);
+    }
+  }
+}
+
+@media only screen and (max-width: $break-mobile) {
+  .workStyle {
+    margin-left: $space-xx-large;
+    margin-right: $space-large;
+
+    h2 {
+      font-size: pxToRem(25);
+    }
+
+    h3,
+    h4 {
+      font-size: pxToRem(20);
+    }
+
+    p {
+      font-size: pxToRem(15);
+    }
+  }
+}
+
+@media only screen and (max-width: $break-xs) {
+  .workStyle {
+    margin-left: $space-standard;
+    margin-right: $space-large;
+
+    h2 {
+      font-size: pxToRem(15);
+    }
+
+    h3,
+    h4 {
+      font-size: pxToRem(10);
+    }
+
+    p {
+      font-size: pxToRem(10);
+    }
+  }
+}

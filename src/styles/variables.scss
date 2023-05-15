@@ -1,0 +1,60 @@
+//color
+$c-black: #000;
+$c-white: #fff;
+$c-white-opacity: rgba(255, 255, 255, 0.7);
+$c-cloudy: #a7a6a5;
+$c-gray-opacity: rgba(128, 128, 128, 0.2);
+$c-negroni: #ffe1be;
+$c-twilight-blue: #f7ffff;
+$c-gray: #888888;
+$c-button: $c-cloudy;
+$c-nightRider: #323131;
+
+//$f-fontAwesome:
+//$f-fontAwesomeBrands:
+$f-baseFontFamily: "Big Shoulders Stencil Display", cursive;
+$break-xss: 320px;
+$break-xxs: 376px;
+$break-xs: 426px;
+$break-mobile: 769px;
+$break-mid: 1025px;
+$break-laptop: 1441px;
+$break-laptopBigger: 1921px;
+$break-high: 2561px;
+$tablet-min: 768px;
+$desktop-min: 1200px;
+$wrapper: 1302px;
+$wrapper-high: 1200px;
+$wrapper-laptop: 990px;
+$wrapper-mid: 800px;
+$wrapper-mobile: 480px;
+$columns: 12;
+$padding: 15px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1199px;
+
+//margin, padding
+$space-null: 0px;
+$space-xxx-small: 2px;
+$space-xx-small: 5px;
+$space-x-small: 10px;
+$space-small: 15px;
+$space-standard: 20px;
+$space-x-medium: 25px;
+$space-medium: 30px;
+$space-large: 40px;
+$space-y-large: 45px;
+$space-x-large: 50px;
+$space-xx-large: 60px;
+$space-xxx-large: 70px;
+$space-xxxx-large: 340px;
+$space-xxxxx-large: 900px;
+$space-xxxxxx-large: 1100px;
+
+$button-small: 175px;
+$button-medium: 294px;
+$button-large: 375px;
+
+$sizes: 8.33333333%, 16.66666667, 25%, 33.33333333%, 41.66666667%, 50%,
+  58.33333333%, 66.66666667%, 75%, 83.33333333%, 91.66666667%, 100%;
