@@ -21,15 +21,14 @@ const Form = () => {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const response = await send(
+      await send(
         "service_angvk1e",
         "template_7othq2o",
         toSend,
         "user_CZXASdETJkJ7zZ1G1Ouhg"
       );
-      await console.log("SUCCESS!", response.status, response.text);
-      await dispatch(open());
-      await setToSend({
+      dispatch(open());
+      setToSend({
         from_name: "",
         to_name: "",
         message: "",
@@ -40,7 +39,7 @@ const Form = () => {
     }
   };
   return (
-    <React.Fragment>
+    <>
       <section className="formPart">
         <h2>&#47;&#47; Contact me</h2>
         <p>If you are willing to work with me, please send me a message.</p>
@@ -80,7 +79,7 @@ const Form = () => {
           </fieldset>
         </form>
       </section>
-    </React.Fragment>
+    </>
   );
 };
 
