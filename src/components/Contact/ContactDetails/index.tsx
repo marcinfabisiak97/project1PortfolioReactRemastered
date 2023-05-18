@@ -25,6 +25,7 @@ const ContactDetails = () => {
               {state.email}
             </p>
             <Clipboard
+              role="clipboard"
               copied={copied}
               setCopied={setCopied}
               text={state.email}
