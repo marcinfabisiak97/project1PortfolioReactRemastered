@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../../state/store";
 import { close } from "../../../state/slices/formModalSlice/formModalSlice";
 const ModalForm = () => {
@@ -13,7 +13,7 @@ const ModalForm = () => {
   }, [state]);
   return (
     <div className="modalBackground">
-      <div className="modalContainer">
+      <div className="modalContainer" role="modalForm">
         <div className="modalContainer__CloseBtn">
           <button onClick={() => dispatch(close())}>X</button>
         </div>
