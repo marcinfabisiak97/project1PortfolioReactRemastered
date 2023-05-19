@@ -13,7 +13,7 @@ const ModalForm = () => {
   }, [state]);
   return (
     <div className="modalBackground">
-      <div className="modalContainer" role="modalForm">
+      <div className="modalContainer" role="dialog">
         <div className="modalContainer__CloseBtn">
           <button onClick={() => dispatch(close())}>X</button>
         </div>

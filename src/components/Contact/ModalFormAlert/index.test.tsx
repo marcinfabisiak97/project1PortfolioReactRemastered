@@ -11,13 +11,7 @@ describe("ModalForm", () => {
         <ModalForm />
       </Provider>
     );
-    const modal = screen.getByRole("modalForm");
-    store.dispatch({
-      type: "formModal/open",
-      payload: {
-        email,
-      },
-    });
+    const modal = screen.getByRole("dialog");
     const closeModalBtn = screen.getByText("X");
     const okBtn = screen.getByText("Ok");
     const emailText = screen.getByText(`An email has been sent to ${email}`);
