@@ -1,4 +1,3 @@
-import React from "react";
 import Clipboard from "react-clipboard-animation";
 import { copyEmail } from "../../Utils";
 import { useAppSelector, useAppDispatch } from "../../../state/store";
