@@ -1,4 +1,3 @@
-import React from "react";
 import Images from "../../../assets/exportFiles";
 import ButtonsCopyAndDownload from "../ButtonsCopyAndDownload";
 import Typewriter from "typewriter-effect";
@@ -6,7 +5,7 @@ import { useAppSelector } from "../../../state/store";
 const Experience = () => {
   const stateData = useAppSelector((state) => state.data);
   return (
-    <React.Fragment>
+    <>
       <section className="upperPart">
         <article className="experience">
           <h2>&#47;&#47; Hi, My name is Martin</h2>
@@ -31,11 +30,11 @@ const Experience = () => {
             of experience within creating my own projects.
           </p>
           <figure className="experience__seework">
-            <a target="blank" href={stateData.gitHub}>
+            <a target="blank" href={stateData.gitHub} role="link">
               <p>See my work in github</p>
             </a>
             <a target="blank" href={stateData.gitHub}>
-              <img src={Images.gitHub} alt="github" />
+              <img src={Images.gitHub} alt="github" role="link" />
             </a>
           </figure>
         </article>
@@ -47,7 +46,7 @@ const Experience = () => {
           </div>
         </article>
       </section>
-    </React.Fragment>
+    </>
   );
 };
 export default Experience;
