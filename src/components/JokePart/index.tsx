@@ -17,7 +17,7 @@ const JokePart = () => {
   return (
     <section className="jokePart">
       <h2>Joke Generator which uses Axios</h2>
-      <p>{joke}</p>
+      <p role="article">{joke}</p>
       <button onClick={() => randomJokeGenerator()}>New Joke</button>
     </section>
   );
