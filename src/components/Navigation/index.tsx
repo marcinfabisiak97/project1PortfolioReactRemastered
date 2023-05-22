@@ -18,7 +18,7 @@ const Navigation: React.FC<RefProps> = ({
   ];
   const [isOpen, setOpen] = useState(true);
   return (
-    <header className="header" ref={aboutref}>
+    <header className="header" ref={aboutref} data-testid="navigation">
       <div className="header__menuImg">
         <GiHamburgerMenu
           className={

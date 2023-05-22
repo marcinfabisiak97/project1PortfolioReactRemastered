@@ -2,7 +2,7 @@ import Images from "../../assets/exportFiles";
 import { RefProps } from "../Types";
 const Workstyle: React.FC<RefProps> = ({ blogref }) => {
   return (
-    <section className="workStyle" ref={blogref}>
+    <section className="workStyle" ref={blogref} data-testid="workStyle">
       <article className="workStyle__mainTitle">
         <h2>&#47;&#47; How I work</h2>
         <h3>Hints and tips</h3>

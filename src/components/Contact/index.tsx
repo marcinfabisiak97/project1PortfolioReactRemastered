@@ -7,7 +7,7 @@ import ModalForm from "./ModalFormAlert";
 const Contact: React.FC<RefProps> = ({ contactref }) => {
   const stateForm = useAppSelector((state) => state.formModal.isOpen);
   return (
-    <section className="contact" ref={contactref}>
+    <section className="contact" ref={contactref} data-testid="contact">
       <Form />
       <ContactDetails />
       {stateForm && <ModalForm />}

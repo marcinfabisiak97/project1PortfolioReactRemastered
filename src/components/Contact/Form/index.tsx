@@ -3,7 +3,7 @@ import { send } from "emailjs-com";
 import { useAppDispatch } from "../../../state/store";
 import { open } from "../../../state/slices/formModalSlice/formModalSlice";
 
-const Form = () => {
+const Form: React.FC = () => {
   const dispatch = useAppDispatch();
   const [toSend, setToSend] = useState({
     from_name: "",

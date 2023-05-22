@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../../state/store";
 import { close } from "../../../state/slices/formModalSlice/formModalSlice";
-const ModalForm = () => {
+const ModalForm: React.FC = () => {
   const state = useAppSelector((state) => state.formModal.isOpen);
   const stateData = useAppSelector((state) => state.data);
   const dispatch = useAppDispatch();

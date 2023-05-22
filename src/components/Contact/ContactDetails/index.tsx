@@ -3,7 +3,7 @@ import Clipboard from "react-clipboard-animation";
 import { copyEmail } from "../../Utils";
 import { useAppSelector } from "../../../state/store";
 import { useChangeCopiedStateToDefaultAfter } from "../../Hooks";
-const ContactDetails = () => {
+const ContactDetails: React.FC = () => {
   const state = useAppSelector((state) => state.data);
   const [copied, setCopied] = useChangeCopiedStateToDefaultAfter(1000);
   return (

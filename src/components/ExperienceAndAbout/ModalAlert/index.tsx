@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../../state/store";
 import { close } from "../../../state/slices/modalSlice/modalSlice";
 import axios from "axios";
-const Modal = () => {
+const Modal: React.FC = () => {
   const state = useAppSelector((state) => state.modal.isOpen);
   const stateData = useAppSelector((state) => state.data);
   const dispatch = useAppDispatch();

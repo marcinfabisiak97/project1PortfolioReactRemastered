@@ -5,7 +5,7 @@ import { RefProps } from "../Types";
 const Myworks: React.FC<RefProps> = ({ myworkref }) => {
   return (
     <React.Fragment>
-      <article className="myWorks" ref={myworkref}>
+      <article className="myWorks" ref={myworkref} data-testid="myWorks">
         <h2>&#47;&#47; My works</h2>
         <h3>Portfolio</h3>
         <p>

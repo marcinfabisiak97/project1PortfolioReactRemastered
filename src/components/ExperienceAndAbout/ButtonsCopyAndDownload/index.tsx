@@ -3,7 +3,7 @@ import { copyEmail } from "../../Utils";
 import { useAppSelector, useAppDispatch } from "../../../state/store";
 import { open } from "../../../state/slices/modalSlice/modalSlice";
 import { useChangeCopiedStateToDefaultAfter } from "../../Hooks";
-const ButtonsCopyAndDownload = () => {
+const ButtonsCopyAndDownload: React.FC = () => {
   const state = useAppSelector((state) => state.data);
   const dispatch = useAppDispatch();
   const [copied, setCopied] = useChangeCopiedStateToDefaultAfter(1000);

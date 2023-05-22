@@ -1,5 +1,5 @@
 import Images from "../../../assets/exportFiles";
-const Portfolios = () => {
+const Portfolios: React.FC = () => {
   return (
     <section className="portfolios">
       <article className="portfolios__view">

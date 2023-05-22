@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 const randomJokeApi = "https://api.chucknorris.io/jokes/random";
-const JokePart = () => {
+const JokePart: React.FC = () => {
   const [joke, setJoke] = useState();
   const randomJokeGenerator = async () => {
     try {
@@ -15,7 +15,7 @@ const JokePart = () => {
     randomJokeGenerator();
   }, []);
   return (
-    <section className="jokePart">
+    <section className="jokePart" data-testid="jokePart">
       <h2>Joke Generator which uses Axios</h2>
       <p role="article">{joke}</p>
       <button onClick={() => randomJokeGenerator()}>New Joke</button>

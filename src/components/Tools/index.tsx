@@ -1,7 +1,7 @@
 import Images from "../../assets/exportFiles";
 import { useInView } from "react-intersection-observer";
 
-const Tools = () => {
+const Tools: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
   const myTools = [
     { pict: Images.javaScript, text: "Javascript" },
@@ -14,7 +14,7 @@ const Tools = () => {
     { pict: Images.sourceTree, text: "Sourcetree" },
   ];
   return (
-    <section className="wrapperTools">
+    <section className="wrapperTools" data-testid="tools">
       <h2>&#47;&#47; Tools</h2>
       <h3>My essentials</h3>
       <article className="tollsIcon" ref={ref}>

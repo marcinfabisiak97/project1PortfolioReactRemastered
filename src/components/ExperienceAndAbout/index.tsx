@@ -7,7 +7,7 @@ import { useAppSelector } from "../../state/store";
 const ExperienceAndAbout: React.FC<RefProps> = ({ skillref }) => {
   const state = useAppSelector((state) => state.modal.isOpen);
   return (
-    <section className="upperpartAndDownpart">
+    <section className="upperpartAndDownpart" data-testid="experienceAndAbout">
       <Experience />
       <About skillref={skillref} />
       {state && <Modal />}

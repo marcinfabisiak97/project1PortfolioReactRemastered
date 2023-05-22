@@ -2,7 +2,7 @@ import Images from "../../../assets/exportFiles";
 import ButtonsCopyAndDownload from "../ButtonsCopyAndDownload";
 import Typewriter from "typewriter-effect";
 import { useAppSelector } from "../../../state/store";
-const Experience = () => {
+const Experience: React.FC = () => {
   const stateData = useAppSelector((state) => state.data);
   return (
     <>
@@ -30,11 +30,11 @@ const Experience = () => {
             of experience within creating my own projects.
           </p>
           <figure className="experience__seework">
-            <a target="blank" href={stateData.gitHub} role="link">
+            <a target="blank" href={stateData.gitHub}>
               <p>See my work in github</p>
             </a>
             <a target="blank" href={stateData.gitHub}>
-              <img src={Images.gitHub} alt="github" role="link" />
+              <img src={Images.gitHub} alt="github" />
             </a>
           </figure>
         </article>
