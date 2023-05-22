@@ -1,6 +1,6 @@
 import Images from "../../assets/exportFiles";
-
 import { useInView } from "react-intersection-observer";
+
 const Tools = () => {
   const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
   const myTools = [
@@ -13,7 +13,6 @@ const Tools = () => {
     { pict: Images.bitBucket, text: "Bitbucket" },
     { pict: Images.sourceTree, text: "Sourcetree" },
   ];
-
   return (
     <section className="wrapperTools">
       <h2>&#47;&#47; Tools</h2>
